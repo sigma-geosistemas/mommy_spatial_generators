@@ -1,0 +1,13 @@
+*.pyc
+*.swp
+*.swo
+*.kpf
+bin/
+include/
+lib/
+local/
+share/
+*.egg-info/
+.idea
+.tox
+
