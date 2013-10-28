@@ -75,6 +75,6 @@ def gen_rectangular_polygon(min_x=-1,
     return Polygon(LinearRing([point_a, point_b, point_c, point_d, point_e]), srid=srid)
 
 
-MOMMY_SPATIAL_FIELDS = {"django.contrib.gis.models.PointField": gen_point,
-                        "django.contrib.gis.models.LineStringField": gen_linestring,
-                        "django.contrib.gis.models.PolygonField": gen_rectangular_polygon}
+MOMMY_SPATIAL_FIELDS = {"django.contrib.gis.db.models.PointField": gen_point,
+                        "django.contrib.gis.db.models.LineStringField": gen_linestring,
+                        "django.contrib.gis.db.models.PolygonField": gen_rectangular_polygon}
