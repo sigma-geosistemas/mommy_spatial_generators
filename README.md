@@ -23,3 +23,15 @@ on your settings.py called MOMMY_CUSTOM_FIELDS_GEN and concatenate the already
 predefined dict we provide (MOMMY_SPATIAL_FIELDS), located in generators.py.
 
 model_mommy should take of the rest.
+
+```python
+# settings.py
+from spatial_generators import MOMMY_SPATIAL_FIELDS
+
+MOMMY_CUSTOM_FIELDS_GEN = MOMMY_SPATIAL_FIELDS
+```
+
+# Special thanks to:
+
+* mdj2, aka Matt Johnson for fixing some things and implementing MultiPolygon support (https://github.com/mdj2);
+* pchiquet, aka Pierre Chiquet, for fixing some things and implementing support for granulirity in point generation (https://github.com/pchiquet);
