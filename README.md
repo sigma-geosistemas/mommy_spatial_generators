@@ -38,7 +38,7 @@ model_mommy should take of the rest.
 
 ```python
 # settings.py
-from spatial_generators import MOMMY_SPATIAL_FIELDS
+from mommy_spatial_generators import MOMMY_SPATIAL_FIELDS
 
 MOMMY_CUSTOM_FIELDS_GEN = MOMMY_SPATIAL_FIELDS
 ```
