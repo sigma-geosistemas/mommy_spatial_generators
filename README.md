@@ -16,6 +16,18 @@ This needs substantial help with packaging and testing.
 
 All new ideas welcome.
 
+# Install
+
+To install this you just need to 
+
+```bash
+pip install -e git+https://github.com/sigma-geosistemas/mommy_spatial_generators.git#egg=mommy_spatial_generators
+```
+
+# Dependencies
+
+* Model Mommy (obviously);
+
 # How to make this work
 
 To integrate this work with model_mommy, you need to create a dict variable
