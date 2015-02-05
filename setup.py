@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='mommy_spatial_generators',
-    version='0.1.1',
+    version='0.1.2',
     packages=['mommy_spatial_generators'],
     include_package_data=True,
     license='Apache 2.0',  # example license
