@@ -1,0 +1,2 @@
+django>=1.8.10
+model_mommy
