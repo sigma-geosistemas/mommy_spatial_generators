@@ -116,13 +116,11 @@ def gen_rectangular_polygon(min_x=-1,
                             srid=4326):
 
     """Generates a rectangular polygon, based on minxy and maxxy."""
-
-    point_a = Point(x=min_x, y=min_y, srid=srid)
-    point_b = Point(x=min_x, y=max_y, srid=srid)
-    point_c = Point(x=max_x, y=max_y, srid=srid)
-    point_d = Point(x=max_x, y=min_y, srid=srid)
-    point_e = Point(x=min_x, y=min_y, srid=srid)
-
+    point_a = gen_point()
+    point_b = Point(x=point_a.x, y=point_a.y + 1, srid=srid)
+    point_c = Point(x=point_a.x + 1, y=point_a.y + 1, srid=srid)
+    point_d = Point(x=point_a.x + 1, y=point_a.y, srid=srid)
+    point_e = point_a.clone()
     return Polygon(LinearRing([point_a, point_b, point_c, point_d, point_e]), srid=srid)
 
 
