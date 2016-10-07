@@ -121,7 +121,8 @@ def gen_rectangular_polygon(min_x=-1,
     point_c = Point(x=point_a.x + 1, y=point_a.y + 1, srid=srid)
     point_d = Point(x=point_a.x + 1, y=point_a.y, srid=srid)
     point_e = point_a.clone()
-    return Polygon(LinearRing([point_a, point_b, point_c, point_d, point_e]), srid=srid)
+    return Polygon(LinearRing([point_a, point_b, point_c, point_d, point_e]),
+                   srid=srid)
 
 
 def gen_rectangular_multipolygon(min_x=-1,
@@ -135,9 +136,11 @@ def gen_rectangular_multipolygon(min_x=-1,
     """Generates a multipolygon, based on minxy and maxxy."""
     return MultiPolygon([gen_rectangular_polygon(min_x, min_y, max_x, max_y, srid) for i in range(gen_integer(min_polys, max_polys+1))])
 
-MOMMY_SPATIAL_FIELDS = {"django.contrib.gis.db.models.PointField": gen_point,
-                        "django.contrib.gis.db.models.MultiPointField": gen_multipoint,
-                        "django.contrib.gis.db.models.LineStringField": gen_linestring,
-                        "django.contrib.gis.db.models.MultiLineStringField": gen_multilinestring,
-                        "django.contrib.gis.db.models.PolygonField": gen_rectangular_polygon,
-                        "django.contrib.gis.db.models.MultiPolygonField": gen_rectangular_multipolygon}
+MOMMY_SPATIAL_FIELDS = {
+    "django.contrib.gis.db.models.PointField": gen_point,
+    "django.contrib.gis.db.models.MultiPointField": gen_multipoint,
+    "django.contrib.gis.db.models.LineStringField": gen_linestring,
+    "django.contrib.gis.db.models.MultiLineStringField": gen_multilinestring,
+    "django.contrib.gis.db.models.PolygonField": gen_rectangular_polygon,
+    "django.contrib.gis.db.models.MultiPolygonField": gen_rectangular_multipolygon
+    }
