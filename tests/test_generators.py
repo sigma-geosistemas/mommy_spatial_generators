@@ -16,6 +16,14 @@ class PointGeneratorTestCase(TestCase):
     on to it
     """
 
+    def test_import(self):
+
+        try:
+            from mommy_spatial_generators import MOMMY_SPATIAL_FIELDS
+            self.assertEqual(len(MOMMY_SPATIAL_FIELDS.keys()), 6)
+        except:
+            self.fail('import is not working')
+
     def test_point_is_point(self):
 
         point = gen_point()
