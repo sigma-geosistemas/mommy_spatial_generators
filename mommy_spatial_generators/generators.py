@@ -17,7 +17,10 @@ from django.contrib.gis.geos import (Point,
                                      Polygon,
                                      MultiPolygon,
                                      LinearRing, )
-from model_mommy.generators import gen_integer
+try:
+    from model_mommy.generators import gen_integer
+except:
+    from model_mommy.random_gen import gen_integer
 
 
 def gen_point(min_x=-180,
