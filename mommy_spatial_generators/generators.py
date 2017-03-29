@@ -25,7 +25,7 @@ except:
 
 def gen_point(min_x=-180,
               min_y=-90,
-              max_x=190,
+              max_x=180,
               max_y=90,
               min_z=None,
               max_z=None,
@@ -51,7 +51,7 @@ def gen_point(min_x=-180,
 
 def gen_multipoint(min_x=-180,
                    min_y=-90,
-                   max_x=190,
+                   max_x=180,
                    max_y=90,
                    min_z=None,
                    max_z=None,
